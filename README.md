@@ -2,7 +2,7 @@
 
 Un gestionnaire de serveur Nginx moderne avec interface graphique, monitoring en temps réel et gestion SSL automatisée.
 
-![Nginx Manager Dashboard](https://raw.githubusercontent.com/espero-soft/nginx-manager/main/screenshots/dashboard.png)
+![Nginx Manager Dashboard](dashboard.png)
 
 ## 🚀 Fonctionnalités
 
@@ -11,18 +11,15 @@ Un gestionnaire de serveur Nginx moderne avec interface graphique, monitoring en
   - Utilisation CPU/Mémoire
   - Bande passante
   - Requêtes par seconde
-  
 - 🔧 **Gestion des configurations**
   - Création/modification de configurations
   - Activation/désactivation de sites
   - Support des virtual hosts
   - Gestion des reverse proxies
-  
 - 🔒 **Gestion SSL automatisée**
   - Intégration Let's Encrypt
   - Renouvellement automatique
   - Configuration HTTPS simplifiée
-  
 - 📈 **Statistiques avancées**
   - Codes de statut HTTP
   - Chemins les plus visités
@@ -32,6 +29,7 @@ Un gestionnaire de serveur Nginx moderne avec interface graphique, monitoring en
 ## 🛠️ Technologies
 
 - **Frontend**
+
   - Next.js 13.5
   - React 18
   - TypeScript
@@ -49,6 +47,7 @@ Un gestionnaire de serveur Nginx moderne avec interface graphique, monitoring en
 ## 📦 Installation
 
 1. **Prérequis**
+
    ```bash
    # Installation de Nginx
    sudo apt update
@@ -59,6 +58,7 @@ Un gestionnaire de serveur Nginx moderne avec interface graphique, monitoring en
    ```
 
 2. **Installation du projet**
+
    ```bash
    # Cloner le dépôt
    git clone https://github.com/espero-soft/nginx-manager.git
@@ -77,11 +77,13 @@ Un gestionnaire de serveur Nginx moderne avec interface graphique, monitoring en
 ## 🔧 Configuration
 
 1. **Configuration Nginx**
+
    - Les fichiers de configuration sont stockés dans `/etc/nginx/`
    - Sites disponibles : `/etc/nginx/sites-available/`
    - Sites activés : `/etc/nginx/sites-enabled/`
 
 2. **Configuration SSL**
+
    - Les certificats sont gérés par Let's Encrypt
    - Stockage : `/etc/letsencrypt/live/`
 
@@ -97,14 +99,17 @@ Un gestionnaire de serveur Nginx moderne avec interface graphique, monitoring en
 ### Endpoints REST
 
 - `GET /api/nginx`
+
   - Liste toutes les configurations
   - Retourne : `NginxConfig[]`
 
 - `POST /api/nginx`
+
   - Crée/modifie une configuration
   - Corps : `{ action, configName, config, ssl, source, email }`
 
 - `GET /api/nginx/logs`
+
   - Récupère les logs d'accès
   - Retourne : `AccessLogEntry[]`
 
@@ -137,6 +142,7 @@ MIT License - voir [LICENSE](LICENSE) pour plus de détails.
 ## 👤 Auteur
 
 **AKPOLI Espero**
+
 - Email: contact@espero-soft.com
 - Site: [https://espero-soft.com](https://espero-soft.com)
 - GitHub: [@espero-soft](https://github.com/espero-soft)
